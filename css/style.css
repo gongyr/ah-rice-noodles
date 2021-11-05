@@ -10,7 +10,10 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16pt;
-  }
+  } 
+*:focus{
+    border: 2px solid #FEA134;
+}
 .logo{
     width: 75%;
     margin-bottom: 20px;
@@ -37,10 +40,6 @@ body > header, .nav_links,.pricing{
 nav{
     padding-bottom: 20px;
 }
-.nav_item a:hover{
-    color: #FEA134;
-    text-decoration: underline;
-}
 
 
 .nav_links{
@@ -56,7 +55,7 @@ p {
     padding: 0 30px;
   }
   
-  a.skip{
+a.skip{
     background: white;
     left: 0;
     padding: 6px;
@@ -80,35 +79,14 @@ p {
 main{
     padding: 20px 0;
 }
-.card > header {
-    background: #FEA134; 
-    border: solid 2px #FEA134;
-    padding: 20px 0;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-}
-.card{
-    flex-basis: 450px;
-}
-.card button{
-    width: 90%;
-    height: 40px;
-    border: 0;
-    margin-left: 5%;
-    border-radius: 7px;
-    background: #FEA134;
-    color: white;
-    font-size: 1em;
-  }
-
 .gallery {
     display: grid;
     padding: 1.6rem;
     grid-template-columns: repeat(1, 1fr);
     gap: 1.2rem;
   }
-.gallery-item {
-    overflow: hidden;
+.gallery-item img{
+    object-fit: cover;
 }
 
 h1{
@@ -131,6 +109,7 @@ footer{
     color: white;
     padding: 30px;
     text-align: center;
+    margin-top:20px;
 }
 
 @media all and (min-width:850px) {
@@ -156,9 +135,19 @@ footer{
     display:grid;
     row-gap: 4.8rem;
     max-width: 120rem;
-    padding: 0 3.2rem;
+    padding: 0 30px;
     margin: 0 auto;
     grid-template-columns: 1fr;
+    margin-top:20px;
+}
+
+
+.cta-img-box{
+    height: 32rem;
+    grid-row: 1;
+    background-image: linear-gradient( to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35) ), url(../img/gallery/gallery-6.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .meal{
     box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 8%);
@@ -171,8 +160,53 @@ footer{
     width:100%;
     object-fit: cover;
 }
-@media all and (prefers-reduced-motion:reduce){
-	#logo {
-	animation: none;
-	}
+.cta{
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
+    border-radius: 11px;
+    background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+    overflow: hidden;
+}
+.cta-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+    padding:30px;
+}
+.cta-form label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+.cta-form input, .cta-form select {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #fdf2e9;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+}
+.btn, .btn:link, .btn:visited {
+    padding: 2.4rem 1.6rem;
+}
+.btn--form {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+    margin-top: 1.2rem;
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: end;
 }
