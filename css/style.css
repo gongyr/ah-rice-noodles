@@ -73,7 +73,7 @@ a.skip:focus{
   }
 
 .highlight a{
-    color: #FEA134 !important;
+    color: #AD5701 !important;
     text-decoration: underline !important;
 }
 main{
@@ -127,7 +127,7 @@ footer{
 .cta-img-box{
     height: 32rem;
     grid-row: 1;
-    background-image: linear-gradient( to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35) ), url(../img/gallery/gallery-6.jpg);
+    background-image: linear-gradient(rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35) ) url(../img/gallery/gallery-6.jpg);
     background-size: cover;
     background-position: center;
 }
