@@ -135,7 +135,6 @@ footer{
     box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 8%);
     border-radius: 1.375rem;
     overflow: hidden;
-    transition: all 0.4s;
 }
 .meal-img{
     height:40vh;
@@ -214,7 +213,6 @@ footer{
     border: none;
     cursor: pointer;
     font-family: inherit;
-    transition: all 0.3s;
     margin-top: 1.2rem;
     background-color: #45260a;
     color: #fdf2e9;
