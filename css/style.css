@@ -14,13 +14,11 @@ body {
 *:focus{
     border: 2px solid #FEA134;
 }
-p, cite{
+p{
     padding: 0 5rem;
     line-height: 1.5;
 }
-cite{
-    color:#98611f;
-}
+
 .logo{
     width: 75%;
     margin-bottom: 3.4rem;
