@@ -14,8 +14,12 @@ body {
 *:focus{
     border: 2px solid #FEA134;
 }
-p{
+p, cite{
     padding: 0 5rem;
+    line-height: 1.5;
+}
+cite{
+    color:#98611f;
 }
 .logo{
     width: 75%;
@@ -25,7 +29,7 @@ header{
     background-color: #FEF2E5;
 }
 
-body > header, .nav_links,.pricing{
+body > header, .nav_links{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,10 +86,10 @@ main{
 .gallery {
     display: grid;
     padding: 1.6rem;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1.2rem;
+    grid-template-columns: 1fr;
+    row-gap: 1.2rem;
   }
-.gallery-item img{
+.gallery-item{
     object-fit: cover;
     border-radius: 1.25rem;
 }
@@ -96,15 +100,24 @@ h1{
     line-height: 1.4;
     font-weight: 600;
     color: #3b2610;
-    letter-spacing: -0.5px;
+    /* letter-spacing: 1px; */
     margin:2rem;
+    
 }
-h2{
+h2,h3{
     font-size: 4rem;
+    font-weight: 500;
     text-align: center;
     padding: 2rem;
     margin-bottom:3.2rem;
   }
+h3{
+    color:#e5912f;
+    font-size:1.2em;
+    line-height: 2;
+    text-align: left;
+    margin-bottom:0;
+}
 footer{
     background-color: #3b2610;
     color: white;
@@ -113,7 +126,7 @@ footer{
     margin-top:3.75rem;
 }
 
-.container{
+.container, .cta-container, .faq-container{
     display:grid;
     row-gap: 4.8rem;
     max-width: 120rem;
@@ -121,6 +134,9 @@ footer{
     margin: 0 auto;
     grid-template-columns: 1fr;
     margin-top: 3.75rem;
+}
+.faq-container{
+    row-gap: 0;
 }
 
 
@@ -201,6 +217,7 @@ footer{
     line-height: 1.8;
     padding:0 3.75rem;
 }
+
 .btn, .btn:link, .btn:visited {
     padding: 1.5rem 1.875rem;
 }
@@ -217,4 +234,33 @@ footer{
     background-color: #45260a;
     color: #fdf2e9;
     align-self: end;
+}
+
+@media all and (min-width:850px) {
+    body > header, .nav_links{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+    body > header{
+        position:sticky;
+        top: 0;
+        left: 0;
+    }
+    .logo {
+        width: 40%;
+    }
+    .container, .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 3.2rem;
+        row-gap:4rem;
+    }
+    .meal-img{
+        height: 35vh;
+    }
+    .cta-container{
+        padding:0 15rem;
+    }
 }
