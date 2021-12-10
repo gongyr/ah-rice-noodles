@@ -258,7 +258,7 @@ footer{
     }
 }
 
-@media all and (min-width:850px) {
+@media screen and (min-width:850px) {
     body > header, .nav_links{
         flex-direction: row;
         justify-content: space-around;
@@ -286,7 +286,7 @@ footer{
 }
 
 
-@media all and (min-width:980px) {
+@media screen and (min-width:980px) {
     .index-logo{
         animation-name: logo-grow;
         animation-duration: 5s;
@@ -306,7 +306,7 @@ footer{
 }
 
 @media all and (prefers-reduced-motion:reduce){
-	#logo {
+	.index-logo{
 	animation: none;
 	}
 }
