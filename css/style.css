@@ -74,6 +74,7 @@ a.skip:focus{
 .highlight a{
     color: #AD5701 !important;
     text-decoration: underline !important;
+    text-transform: uppercase;
 }
 main{
     padding: 2.5rem 0;
@@ -101,7 +102,7 @@ h1{
 }
 h2,.subhead{
     font-size: 4rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     padding: 2rem;
     margin-bottom:3.2rem;
@@ -255,4 +256,57 @@ footer{
     .cta-container{
         padding:0 15rem;
     }
+}
+
+@media all and (min-width:850px) {
+    body > header, .nav_links{
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+    body > header{
+        position:sticky;
+        top: 0;
+        left: 0;
+    }
+    .logo {
+        width: 40%;
+    }
+    .container, .gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 3.2rem;
+        row-gap:4rem;
+    }
+    .meal-img{
+        height: 35vh;
+    }
+    .cta-container{
+        padding:0 15rem;
+    }
+}
+
+
+@media all and (min-width:980px) {
+    .index-logo{
+        animation-name: logo-grow;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+    }
+    @keyframes logo-grow {
+        from{
+            width: 50px;
+            opacity: 0;
+        }
+        to{
+            width: 672px;
+            opacity: 1;
+        }
+    } 
+
+}
+
+@media all and (prefers-reduced-motion:reduce){
+	#logo {
+	animation: none;
+	}
 }
