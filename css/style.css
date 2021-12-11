@@ -389,7 +389,7 @@ footer{
   .flip-card-back p{
     padding:0 2rem;
   }
-}
+
 
 .container, .gallery{
     grid-template-columns: repeat(6, 1fr);
@@ -401,6 +401,7 @@ footer{
 }
 .cta-container{
     padding:0 20rem;
+}
 }
 
 @media all and (prefers-reduced-motion:reduce){
