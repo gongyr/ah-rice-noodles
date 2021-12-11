@@ -234,7 +234,7 @@ footer{
     display:none;
 }
 
-@media all and (min-width:850px) {
+@media screen and (min-width:850px) {
     body > header, .nav_links{
         flex-direction: row;
         justify-content: space-around;
@@ -261,33 +261,6 @@ footer{
     }
 }
 
-@media screen and (min-width:850px) {
-    body > header, .nav_links{
-        flex-direction: row;
-        justify-content: space-around;
-        
-    }
-    body > header{
-        position:sticky;
-        top: 0;
-        left: 0;
-    }
-    .logo {
-        width: 40%;
-    }
-    .container, .gallery{
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 3.2rem;
-        row-gap:4rem;
-    }
-    .meal-img{
-        height: 35vh;
-    }
-    .cta-container{
-        padding:0 15rem;
-        margin:0 auto;
-    }
-}
 
 
 @media screen and (min-width:980px) {
