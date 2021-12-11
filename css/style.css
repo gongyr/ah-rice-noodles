@@ -230,6 +230,9 @@ footer{
     color: #fdf2e9;
     align-self: end;
 }
+.about-text{
+    display:none;
+}
 
 @media all and (min-width:850px) {
     body > header, .nav_links{
@@ -282,11 +285,28 @@ footer{
     }
     .cta-container{
         padding:0 15rem;
+        margin:0 auto;
     }
 }
 
 
 @media screen and (min-width:980px) {
+    .parallax {
+        /* The image used */
+        background-image: url("../img/img_parallax.jpg");
+      
+        /* Set a specific height */
+        min-height: 900px;
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .logo {
+        width: 25%;
+    }
     .index-logo{
         animation-name: logo-grow;
         animation-duration: 5s;
@@ -294,19 +314,104 @@ footer{
     }
     @keyframes logo-grow {
         from{
-            width: 50px;
+            width: 5%;
             opacity: 0;
         }
         to{
-            width: 672px;
+            width: 25%;
             opacity: 1;
         }
     } 
+    .description{
+        width:50%;
+        margin:5rem auto;
+    }
+    .cards-container{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+     /*Source: https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 25vw;
+    height: 400px;
+    border: 2px solid #4a3014;
+    border-radius: 1rem;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+ 
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    border-radius: 1rem;
+    background-color: #FEF2E5;
+    color: #4a3014;
+  }
+  .flip-card-front p{
+    padding-top:20rem;
+    font-size: 3rem;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #FEF2E5;
+    color: #4a3014;
+    transform: rotateY(180deg);
+    text-align:left;
+    overflow-y:auto;
+  }
+  .flip-card-back p{
+    padding:0 2rem;
+  }
+}
 
+.container, .gallery{
+    grid-template-columns: repeat(6, 1fr);
+    column-gap:5rem;
+    max-width:100%;
+}
+.gallery{
+    margin: 0 5rem;
+}
+.cta-container{
+    padding:0 20rem;
 }
 
 @media all and (prefers-reduced-motion:reduce){
+    .parallax {
+        background-attachment: scroll;
+      }
 	.index-logo{
 	animation: none;
 	}
+    .about-text{
+        display:block;
+    }
+
 }
